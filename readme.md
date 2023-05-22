@@ -12,7 +12,7 @@ An Assembly AI token
 ### Setup
 Clone this repository.
 Sign up for Twitter API, Reddit API, and Assembly AI.
-Insert the respective tokens in the [demo_config.ini] file and rename the file to [config.ini].
+Insert the respective tokens in the `[demo_config.ini]` file and rename the file to `[config.ini]`.
 
 ### Run
 Open the [analyze_topic.ipynb] notebook.
