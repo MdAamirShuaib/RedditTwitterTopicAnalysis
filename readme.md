@@ -15,7 +15,7 @@ Sign up for Twitter API, Reddit API, and Assembly AI.
 Insert the respective tokens in the `[demo_config.ini]` file and rename the file to `[config.ini]`.
 
 ### Run
-Open the [analyze_topic.ipynb] notebook.
+Open the `[analyze_topic.ipynb]` notebook.
 Insert the topic in the query variable.
 Insert YouTube links in the links list.
 Run the notebook.
@@ -31,6 +31,6 @@ Additional information
 This tool is still under development, but it can be used to gather a lot of information about a particular topic. The tool can be used for research, for marketing, and for other purposes.
 
 ## Contact
-If you have any questions or feedback, please contact me at [aamirshuaib0@gmail.com].
+If you have any questions or feedback, please contact me at `[aamirshuaib0@gmail.com]`.
 
 I hope this helps!
