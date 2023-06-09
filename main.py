@@ -23,15 +23,6 @@ async def home(request: Request):
 
 @app.post("/analyse", response_class=HTMLResponse)
 async def analyse(request: Request, topic: str = Form(...), count: int = Form(10)):
-    return templates.TemplateResponse(
-        "analysis.html", {"request": request, "topic": topic, "count": count}
-    )
-
-
-@app.get("/extractandanalyse/{topic}/{count}")
-async def extractandanalyse(
-    request: Request, topic: str, count: int = 10, redirect: bool = True
-):
     load_dotenv()
     client_id = os.environ["REDDIT_CLIENT_ID"]
     client_secret = os.environ["REDDIT_CLIENT_SECRET"]
@@ -51,9 +42,6 @@ async def extractandanalyse(
     redditJson = reddit_df.to_json(orient="records")
     # twitterJson = twitter_df.to_json(orient="records")
     # return {"reddit": redditJson, "twitter": twitterJson}
-    return redditJson
-
-
-@app.get("/about")
-async def about():
-    return "About"
+    return templates.TemplateResponse(
+        "analysis.html", {"request": request, "topic": topic, "count": count}
+    )
