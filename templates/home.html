@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="flex flex-col w-full items-center min-h-screen bg-gradient-to-tr from-gray-900 to-gray-950"
+  >
+    <!-- NavBar -->
+    <div class="flex w-full h-20 items-center justify-between">
+      <div>
+        <h1 class="text-white text-2xl tracking-wide font-bold px-6">
+          Social Media Topic Analysis
+        </h1>
+      </div>
+      <div class="flex gap-4 mr-8">
+        <a
+          class="text-white underline tracking-wide"
+          href="https://github.com/MdAamirShuaib"
+          >Github</a
+        >
+        <a
+          class="text-white underline tracking-wide"
+          href="https://www.linkedin.com/in/aamirshuaib/"
+          >LinkedIn</a
+        >
+        <a
+          class="text-white underline tracking-wide"
+          href="https://mohammed-aamir-shuaib.vercel.app/"
+          >Portfolio</a
+        >
+        <a
+          class="text-white underline tracking-wide"
+          href="mailto:aamirshuaib0@gmail.com"
+          >Email</a
+        >
+      </div>
+    </div>
+    <!-- NavBar -->
+
+    <div class="flex flex-col items-center justify-center w-full h-">
+      <div
+        class="flex flex-col items-center justify-center mt-28 min-w-[300px] min-h-[300px] lg:w-[600px] bg-gray-800 rounded-3xl"
+      >
+        <h1 class="text-white text-2xl font-bold tracking-wider mb-8">
+          Insert a Topic
+        </h1>
+        <form
+          method="post"
+          action="/analyse"
+          class="flex flex-col items-center justify-center w-full h-full gap-4"
+        >
+          <div class="flex flex-col w-full items-center justify-center">
+            <input
+              class="w-10/12 h-12 rounded-xl px-5"
+              type="text"
+              name="topic"
+              placeholder="Insert a topic to analyze"
+              required
+            />
+          </div>
+          <div class="flex flex-col w-full items-center justify-center">
+            <h2></h2>
+            <div class="flex w-10/12 items-center justify-between">
+              <input
+                class="w-1/2 h-12 rounded-xl px-5"
+                type="number"
+                name="count"
+                placeholder="Number of Posts (optional)"
+              />
+              <button
+                class="px-6 py-3 rounded-xl bg-gray-600 text-white hover:scale-[1.01]"
+                type="submit"
+              >
+                Analyze
+              </button>
+            </div>
+          </div>
+          <div class="flex items-end justify-end w-10/12"></div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
