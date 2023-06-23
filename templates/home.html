@@ -1,5 +1,30 @@
 <!DOCTYPE html>
 <html>
+  <style>
+    .btn_load::after {
+      content: "";
+      position: absolute;
+      border: 3px solid transparent;
+      border-radius: 50%;
+      border-top-color: white;
+      padding: 7px 7px;
+      margin: top 10px;
+      background: transparent;
+      font-family: Montserrat, sans-serif;
+      font-size: 18px;
+      cursor: wait;
+      animation: circle_loader 1s ease infinite;
+    }
+
+    @keyframes circle_loader {
+      from {
+        transform: rotate(0turn);
+      }
+      to {
+        transform: rotate(1turn);
+      }
+    }
+  </style>
   <head>
     <title>Social Media Topic Analysis</title>
     <meta charset="UTF-8" />
@@ -66,6 +91,7 @@
         >
           <div class="flex flex-col w-full items-center justify-center">
             <input
+              id="topicName"
               class="w-10/12 h-12 rounded-xl px-5"
               type="text"
               name="topic"
@@ -83,7 +109,7 @@
                 placeholder="Number of Posts (optional)"
               />
               <button
-                class="px-8 py-3 rounded-xl bg-gray-600 text-white hover:scale-[1.01]"
+                class="btn h-12 px-6 items-center justify-center rounded-xl bg-gray-600 text-white hover:scale-[1.01]"
                 type="submit"
               >
                 Analyze
@@ -95,4 +121,5 @@
       </div>
     </div>
   </body>
+  <script type="text/javascript" src="../static/btnloading.js"></script>
 </html>

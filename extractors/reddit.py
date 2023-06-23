@@ -46,7 +46,7 @@ def get_reddit(query, client_id, client_secret, user_agent, count: int = 100):
         posts_dict["PostURL"].append(post.url)
 
     top_posts = pd.DataFrame(posts_dict)
-    top_posts["comments"] = top_posts["PostURL"].apply(
+    top_posts["Comments"] = top_posts["PostURL"].apply(
         lambda x: get_comments(x, client_id, client_secret, user_agent)
     )
 

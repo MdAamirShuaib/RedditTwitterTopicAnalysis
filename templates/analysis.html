@@ -12,6 +12,55 @@
       };
     </script>
   </head>
-  <body class="w-full h-screen"></body>
+  <body
+    class="flex flex-col w-full items-center min-h-screen bg-gradient-to-tr from-gray-900 to-gray-950"
+  >
+    <div
+      id="wordcloud"
+      data-wcreddit="{{redditWordCloud}}"
+      data-wctwitter="{{twitterWordCloud}}"
+      data-topic="{{topic}}"
+    ></div>
+    <div class="flex flex-col w-full min-h-screen">
+      <div>
+        <button
+          class="px-4 py-1 mt-5 ml-5 bg-gray-800 rounded-lg hover:scale-[1.01] text-white"
+          onclick="history.back()"
+        >
+          Back
+        </button>
+      </div>
+      <div
+        class="flex flex-col mt-28 lg:flex-row w-full items-center justify-center gap-12"
+      >
+        <div class="flex flex-col items-center justify-center w-fit h-fit">
+          <h1 class="text-2xl text-white font-semibold tracking-wide">
+            Reddit Word Cloud
+          </h1>
+          <img
+            class="w-[600px] h-fit rounded-lg"
+            src="../static/images/wordclouds/reddit.png"
+            <!--
+            src="{{redditWordCloud}}"
+            --
+          />
+          alt="base64 encoded image" />
+        </div>
+        <div class="flex flex-col items-center justify-center w-fit h-fit">
+          <h1 class="text-2xl text-white font-semibold tracking-wide">
+            Twitter Word Cloud
+          </h1>
+          <img
+            class="w-[600px] h-fit rounded-lg"
+            src="../static/images/wordclouds/twitter.png"
+            <!--
+            src="{{twitterWordCloud}}"
+            --
+          />
+          alt="base64 encoded image" />
+        </div>
+      </div>
+    </div>
+  </body>
   <script type="text/javascript" src="../static/analysis.js"></script>
 </html>
